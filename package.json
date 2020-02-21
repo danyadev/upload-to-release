@@ -1,7 +1,7 @@
 {
   "name": "upload-to-release",
-  "version": "1.0.0",
-  "description": "A GitHub Action that uploads a file to last release",
+  "version": "1.0.1",
+  "description": "Модуль для Github Actions, который заливает ассеты в последний релиз",
   "main": "index.js",
   "repository": "https://github.com/danyadev/upload-to-release",
   "author": "danyadev <danyadev@mail.ru>",
@@ -10,10 +10,10 @@
     "build": "ncc build index.js -m"
   },
   "dependencies": {
-    "@actions/core": "^1.2.0",
-    "@actions/github": "^1.1.0"
+    "@actions/core": "1.2.2",
+    "@actions/github": "2.1.1"
   },
   "devDependencies": {
-    "@zeit/ncc": "^0.20.5"
+    "@zeit/ncc": "0.21.1"
   }
 }
