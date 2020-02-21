@@ -27,6 +27,6 @@ void async function() {
       });
     }
   } catch(err) {
-    core.setFailed(err);
+    core.setFailed(err ? err.stack : err);
   }
 }();
