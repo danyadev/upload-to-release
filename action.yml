@@ -1,0 +1,11 @@
+name: upload-to-release
+description: Uploads a file to a GitHub release
+
+inputs:
+  files:
+    description: 'Array'
+    required: true
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
