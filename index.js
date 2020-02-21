@@ -17,7 +17,7 @@ void async function() {
       const [file, name, type] = fileString.trim().slice(1, -1).split(', ');
 
       await github.repos.uploadReleaseAsset({
-        file: fs.readFileSync(file),
+        data: fs.readFileSync(file),
         name: name,
         url: release.upload_url,
         headers: {
