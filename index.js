@@ -13,12 +13,12 @@ void async function() {
       repo
     });
 
-    for(const fileString of files) {
+    for (const fileString of files) {
       const [file, name, type] = fileString.trim().slice(1, -1).split(', ');
 
       await github.repos.uploadReleaseAsset({
         data: fs.readFileSync(file),
-        name: name,
+        name,
         url: release.upload_url,
         headers: {
           'content-type': type,
@@ -26,7 +26,7 @@ void async function() {
         }
       });
     }
-  } catch(err) {
+  } catch (err) {
     core.setFailed(err ? err.stack : err);
   }
 }();
